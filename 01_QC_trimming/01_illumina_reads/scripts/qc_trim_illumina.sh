@@ -34,7 +34,7 @@ rsync -av  $PIC_ILLUMINA/*.fastq.gz .
 fastqc -t 4 *.fastq.gz
 
 # trim reads
-for file in $(ls *.fastq.gz)
+for file in $(ls *1_001.fastq.gz)
 do
 	# Extract the base name of the file (without the extension) and remove the "..." suffix
 	# This base name will be used to construct the output file names for the trimmed and filtered reads
@@ -48,7 +48,7 @@ fastqc -t 4 *.trimmed.fastq.gz
 # syncing to final destinations
 
 # log file
-rsync -av $IL_TRIM/scripts/fastp.$JOB_ID.log $IL_TRIM/logs
+mv $IL_TRIM/scripts/fastp.$JOB_ID.log $IL_TRIM/logs
 
 # for the fastqc outputs (.html) / both pre and post trimming
 rsync -av ./*.html $IL_TRIM/outputs/01_QC

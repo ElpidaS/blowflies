@@ -2,7 +2,7 @@
 #$ -V
 #$ -cwd
 #$ -j y
-#$ -o fastp.$JOB_ID.log
+#$ -o qc_fastp_unzip.$JOB_ID.log
 
 
 # Author: Elpida Skarlou
@@ -37,7 +37,7 @@ rsync -av $PIC_ILLUMINA/*.fastq.gz . && gunzip *.fastq.gz
 fastqc -t 4 *.fastq
 
 # trim reads
-for file in $(ls *.fastq)
+for file in $(ls *1_001.fastq)
 do
 	# Extract the base name of the file (without the extension) and remove the "..." suffix
 	# This base name will be used to construct the output file names for the trimmed and filtered reads
@@ -48,13 +48,20 @@ done
 # fastqc post-trim
 fastqc -t 4 *.trimmed.fastq
 
+# zip all the fastq
+gzip *.trimmed.fastq
+
 # syncing to final destinations
 
 # log file
-rsync -av $IL_TRIM/scripts/fastp.$JOB_ID.log $IL_TRIM/logs
+mv $IL_TRIM/scripts/qc_fastp_unzip.$JOB_ID.log $IL_TRIM/logs
 
 # for the fastqc outputs (.html) / both pre and post trimming
 rsync -av ./*.html $IL_TRIM/outputs/01_QC
 
 # for the trimmed reads
-rsync -av .
+rsync -av ./*.trimmed.fastq.gz $IL_TRIM/outputs/02_trimmed_illumina
+
+rm *.gz
+rm *.html
+rm -rf /scratch/$USER/$JOB_ID

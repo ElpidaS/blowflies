@@ -2,10 +2,17 @@
 #$ -V
 #$ -cwd
 #$ -j y
-#$ -o fastp.$JOB_ID.log
+#$ -o spades.$JOB_ID.log
 
 ### DESCRIPTION 
-### only for the two types of females
+
+# Date: 23.03.2023
+# Author: Elpida Skarlou
+
+# The input of the script is trimmed Illumina paired-end reads in the TRIMMED directory. The script uses BayesHammer for error correction, and then it run
+# SPAdes with the corrected reads and MismatchCorrector to perform genome assembly for both types of female blowflies. 
+# The output of the script is two assembled genomes in two directories, TF_assembly (Male producing Females) and AF_assembly (Female producing Females). 
+# The script also transfers the log file and output files to the SPADES directory and removes intermediate files from the scratch directory.
 
 set -e # exit immediately on error
 

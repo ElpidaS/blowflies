@@ -1,0 +1,184 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.fastq.gz
+
+sent 60,718,083,809 bytes  received 130 bytes  72,847,131.30 bytes/sec
+total size is 60,703,263,162  speedup is 1.00
+null
+null
+Started analysis of AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+null
+null
+null
+null
+Started analysis of AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Started analysis of TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Started analysis of TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 5% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 5% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 5% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 5% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 10% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 10% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 10% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 10% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 15% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 15% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 15% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 15% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 20% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 20% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 20% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 20% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 25% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 25% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 25% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 25% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 30% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 30% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 30% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 35% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 30% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 35% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 40% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 35% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 40% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 35% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 45% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 45% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 40% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 40% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 50% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 50% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 45% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 45% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 55% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 55% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 50% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 50% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 60% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 60% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 55% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 65% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 55% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 65% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 60% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 70% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 60% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 70% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 65% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 75% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 75% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 65% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 80% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 70% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 80% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 70% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 85% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 75% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 85% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 75% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 90% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 90% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 80% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 80% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 95% complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 95% complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Approx 85% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Analysis complete for TF11_Chrysomya-rufifacies_S3_R1_001.fastq
+Approx 85% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Started analysis of TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Analysis complete for TF11_Chrysomya-rufifacies_S3_R2_001.fastq
+Started analysis of TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 90% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 5% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 90% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 5% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 10% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 95% complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 10% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 95% complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 15% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 15% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Analysis complete for AF7_Chrysomya-rufifacies_S2_R1_001.fastq
+Approx 20% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Analysis complete for AF7_Chrysomya-rufifacies_S2_R2_001.fastq
+Approx 20% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 25% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 25% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 30% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 30% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 35% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 35% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 40% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 40% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 45% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 45% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 50% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 50% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 55% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 55% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 60% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 60% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 65% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 65% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 70% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 70% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 75% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 75% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 80% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 80% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 85% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 85% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 90% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 90% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Approx 95% complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Approx 95% complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Analysis complete for TF19_Chrysomya-rufifacies_S4_R1_001.fastq
+Analysis complete for TF19_Chrysomya-rufifacies_S4_R2_001.fastq
+Read1 before filtering:
+total reads: 158763743
+total bases: 23973325193
+Q20 bases: 23096773435(96.3436%)
+Q30 bases: 21732397584(90.6524%)
+
+Read2 before filtering:
+total reads: 158763743
+total bases: 23973325193
+Q20 bases: 22451414983(93.6517%)
+Q30 bases: 20551742273(85.7275%)
+
+Read1 after filtering:
+total reads: 157149539
+total bases: 22764321787
+Q20 bases: 22104498645(97.1015%)
+Q30 bases: 20875766233(91.7039%)
+
+Read2 after filtering:
+total reads: 157149539
+total bases: 22764801200
+Q20 bases: 21512026433(94.4969%)
+Q30 bases: 19741619171(86.7199%)
+
+Filtering result:
+reads passed filter: 314299078
+reads failed due to low quality: 3159548
+reads failed due to too many N: 24956
+reads failed due to too short: 43904
+reads with adapter trimmed: 37672684
+bases trimmed due to adapters: 1775442889
+
+Duplication rate: 8.05621%
+
+Insert size peak (evaluated by paired-end reads): 153
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./AF7_Chrysomya-rufifacies_S2_R1_001.fastq -I ./AF7_Chrysomya-rufifacies_S2_R2_001.fastq -o ./AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq -O ./AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq 
+fastp v0.22.0, time used: 3560 seconds
+ERROR: Failed to open file: ./AF7_Chrysomya-rufifacies_S2_R2_001.fastq1_001.fastq
