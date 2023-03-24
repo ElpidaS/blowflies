@@ -6,12 +6,15 @@
 
 
 # Author: Elpida Skarlou
-# Date: 2023-03-22
+# Date: 2024-03-22
 
 # Description: 
+#
+# The same as qc_trim_illumina.sh, but I unzip the reads before using them
+#
 # This script performs quality control on Illumina reads using FastQC and trims reads using Fastp. 
-# It takes as input gzipped paired-end Illumina reads located in $PIC_ILLUMINA
-# ,and outputs FastQC reports for both pre- and post-trimmed reads, as well as trimmed gzipped reads. 
+# It takes as input unzipped paired-end Illumina reads located in $PIC_ILLUMINA
+# ,and outputs FastQC reports for both pre- and post-trimmed reads, as well as trimmed unzipped reads. 
 # The outputs can be found in /data/ross/flies/analyses/blowflies/01_QC_trimming. 
 
 
@@ -27,23 +30,23 @@ IL_TRIM=/data/ross/flies/analyses/blowflies/01_QC_trimming/01_illumina_reads/
 mkdir -p $SCRATCH
 cd $SCRATCH
 
-# sync files between $PIC_ILLUMINA and $SCRATCH 
-rsync -av  $PIC_ILLUMINA/*.fastq.gz .
+# sync files between $PIC_ILLUMINA and $SCRATCH and unzip them
+rsync -av $PIC_ILLUMINA/*.fastq.gz . && gunzip *.fastq.gz
 
 # fastqc pre-trim
-fastqc -t 4 *.fastq.gz
+fastqc -t 4 *.fastq
 
 # trim reads
-for file in $(ls *.fastq.gz)
+for file in $(ls *.fastq)
 do
 	# Extract the base name of the file (without the extension) and remove the "..." suffix
 	# This base name will be used to construct the output file names for the trimmed and filtered reads
-	base=$(basename $file "1_001.fastq.gz") 
-  	fastp -i ./${base}1_001.fastq.gz -I ./${base}2_001.fastq.gz -o ./${base}1_001.trimmed.fastq.gz -O ./${base}2_001.trimmed.fastq.gz
+	base=$(basename $file "1_001.fastq") 
+  	fastp -i ./${base}1_001.fastq -I ./${base}2_001.fastq -o ./${base}1_001.trimmed.fastq -O ./${base}2_001.trimmed.fastq
 done
 
 # fastqc post-trim
-fastqc -t 4 *.trimmed.fastq.gz
+fastqc -t 4 *.trimmed.fastq
 
 # syncing to final destinations
 
@@ -54,8 +57,4 @@ rsync -av $IL_TRIM/scripts/fastp.$JOB_ID.log $IL_TRIM/logs
 rsync -av ./*.html $IL_TRIM/outputs/01_QC
 
 # for the trimmed reads
-rsync -av ./*.trimmed.fastq.gz $IL_TRIM/outputs/02_trimmed_illumina
-
-rm *.gz
-rm *.html
-rm -rf /scratch/$USER/$JOB_ID
+rsync -av .
