@@ -1,2 +1,2 @@
-#files to ignore
+# Ignore subdirectories
 /data/ross/flies/analyses/blowflies/*/outputs
