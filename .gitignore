@@ -1,2 +1,2 @@
 # Ignore subdirectories
-/data/ross/flies/analyses/blowflies/*/outputs
+**/outputs
