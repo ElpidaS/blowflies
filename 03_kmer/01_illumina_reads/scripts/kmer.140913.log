@@ -1,0 +1,11 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.fastq.gz
+
+sent 60,718,083,809 bytes  received 130 bytes  243,359,053.86 bytes/sec
+total size is 60,703,263,162  speedup is 1.00
+/var/spool/gridengine/execd/bigbang/job_scripts/140913: line 38: 49358 Aborted                 (core dumped) jellyfish count -C -m 21 -s 1000000000 -t 10 ${base}_files.fastq.gz -o ${base}_reads.jf

@@ -1,0 +1,90 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.trimmed.fastq.gz
+
+sent 56,979,636,621 bytes  received 130 bytes  95,204,071.43 bytes/sec
+total size is 56,965,728,373  speedup is 1.00
+
+
+== Warning ==  output dir is not empty! Please, clean output directory before run.
+
+
+
+
+== Warning ==  No assembly mode was specified! If you intend to assemble high-coverage multi-cell/isolate data, use '--isolate' option.
+
+
+Command line: /ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades.py	-1	/scratch/eskarlou/141342/SPAdes/AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz	-2	/scratch/eskarlou/141342/SPAdes/AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz	--only-error-correction	-o	/scratch/eskarlou/141342/SPAdes	
+
+System information:
+  SPAdes version: 3.15.5
+  Python version: 3.11.2
+  OS: Linux-4.15.0-176-generic-x86_64-with-glibc2.27
+
+Output dir: /scratch/eskarlou/141342/SPAdes
+Mode: ONLY read error correction (without assembling)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/scratch/eskarlou/141342/SPAdes/AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz']
+      right reads: ['/scratch/eskarlou/141342/SPAdes/AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Read error correction parameters:
+  Iterations: 1
+  PHRED offset will be auto-detected
+  Corrected reads will be compressed
+Other parameters:
+  Dir for temp files: /scratch/eskarlou/141342/SPAdes/tmp
+  Threads: 16
+  Memory limit (in Gb): 250
+
+
+======= SPAdes pipeline started. Log can be found here: /scratch/eskarlou/141342/SPAdes/spades.log
+
+
+===== Before start started. 
+
+
+===== Read error correction started. 
+
+
+===== Read error correction started. 
+
+
+== Running: /ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades-hammer /scratch/eskarlou/141342/SPAdes/corrected/configs/config.info
+
+  0:00:00.000     1M / 33M   INFO    General                 (main.cpp                  :  75)   Starting BayesHammer, built from N/A, git revision N/A
+  0:00:00.037     1M / 33M   INFO    General                 (main.cpp                  :  76)   Loading config from /scratch/eskarlou/141342/SPAdes/corrected/configs/config.info
+  0:00:00.056     1M / 33M   INFO    General                 (main.cpp                  :  78)   Maximum # of threads to use (adjusted due to OMP capabilities): 16
+  0:00:00.063     1M / 33M   INFO    General                 (memory_limit.cpp          :  54)   Memory limit set to 250 Gb
+  0:00:00.063     1M / 33M   INFO    General                 (main.cpp                  :  86)   Trying to determine PHRED offset
+  0:00:00.069     1M / 33M   INFO    General                 (main.cpp                  :  92)   Determined value is 33
+  0:00:00.071     1M / 33M   INFO    General                 (hammer_tools.cpp          :  38)   Hamming graph threshold tau=1, k=21, subkmer positions = [ 0 10 ]
+  0:00:00.073     1M / 33M   INFO    General                 (main.cpp                  : 113)   Size of aux. kmer data 24 bytes
+     === ITERATION 0 begins ===
+  0:00:00.074     1M / 33M   INFO    General                 (kmer_index_builder.hpp    : 243)   Splitting kmer instances into 16 files using 16 threads. This might take a while.
+  0:00:00.075     1M / 33M   INFO    General                 (file_limit.hpp            :  42)   Open file limit set to 1024
+  0:00:00.075     1M / 33M   INFO    General                 (kmer_splitter.hpp         :  93)   Memory available for splitting buffers: 5.20833 Gb
+  0:00:00.075     1M / 33M   INFO    General                 (kmer_splitter.hpp         : 101)   Using cell size of 4194304
+  0:00:00.084  9217M / 9217M INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /scratch/eskarlou/141342/SPAdes/AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+  0:00:48.988  9217M / 9217M INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 1439505 reads
+  0:01:35.654  9217M / 10G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 4166532 reads
+  0:02:31.927  9217M / 11G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 6906193 reads
+  0:03:29.101  9217M / 11G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 9768584 reads
+  0:04:18.543  9217M / 11G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 12395849 reads
+  0:05:27.774  9217M / 11G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 15235230 reads
+  0:06:17.925  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 18206043 reads
+  0:07:34.523  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 21327867 reads
+  0:08:22.535  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 24166452 reads
+  0:09:09.937  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 27403245 reads

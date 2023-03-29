@@ -1,0 +1,44 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.trimmed.fastq.gz
+
+sent 56,979,636,621 bytes  received 130 bytes  114,531,933.17 bytes/sec
+total size is 56,965,728,373  speedup is 1.00
+Command line: /ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades.py	-1	/scratch/eskarlou/141123/SPAdes/AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz	-2	/scratch/eskarlou/141123/SPAdes/AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz	--only-error-correction	-o	/scratch/eskarlou/141123/SPAdes/01_corrected_reads	
+
+System information:
+  SPAdes version: 3.13.0
+  Python version: 3.10.10
+  OS: Linux-4.15.0-189-generic-x86_64-with-glibc2.27
+
+Output dir: /scratch/eskarlou/141123/SPAdes/01_corrected_reads
+Mode: ONLY read error correction (without assembling)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Multi-cell mode (you should set '--sc' flag if input data was obtained with MDA (single-cell) technology or --meta flag if processing metagenomic dataset)
+  Reads:
+Traceback (most recent call last):
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades.py", line 1093, in <module>
+    main(sys.argv)
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades.py", line 714, in main
+    print_used_values(cfg, log)
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades.py", line 110, in print_used_values
+    dataset_data = pyyaml.load(open(cfg["dataset"].yaml_filename, 'r'))
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/__init__.py", line 72, in load
+    return loader.get_single_data()
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/constructor.py", line 37, in get_single_data
+    return self.construct_document(node)
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/constructor.py", line 46, in construct_document
+    for dummy in generator:
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/constructor.py", line 398, in construct_yaml_map
+    value = self.construct_mapping(node)
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/constructor.py", line 204, in construct_mapping
+    return super().construct_mapping(node, deep=deep)
+  File "/ceph/users/eskarlou/miniconda3/envs/SPAdes/share/spades-3.13.0-0/share/spades/pyyaml3/constructor.py", line 126, in construct_mapping
+    if not isinstance(key, collections.Hashable):
+AttributeError: module 'collections' has no attribute 'Hashable'

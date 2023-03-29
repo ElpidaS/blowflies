@@ -11,7 +11,7 @@
 
 # The input of the script is trimmed Illumina paired-end reads in the TRIMMED directory. The script uses BayesHammer for error correction, and then it run
 # SPAdes with the corrected reads and MismatchCorrector to perform genome assembly for both types of female blowflies. 
-# The output of the script is two assembled genomes in two directories, TF_assembly (Male producing Females) and AF_assembly (Female producing Females). 
+# The output of the script is three assembled genomes for TF  (Male producing Females) and AF (Female producing Females) individuals.
 # The script also transfers the log file and output files to the SPADES directory and removes intermediate files from the scratch directory.
 
 set -e # exit immediately on error
@@ -36,27 +36,34 @@ rsync -av $TRIMMED/*.trimmed.fastq.gz .
 
 #### run BayesHammer for error correction ####
 
-mkdir 01_corrected_reads
+# spades vesrion 3.15.5
 
-for file in $(ls *.trimmed.fastq.gz)
+for file in $(ls *1_001.trimmed.fastq.gz)
 do
 	base=$(basename $file "1_001.trimmed.fastq.gz") 
-  	spades.py -1 ${base}1_001.trimmed.fastq.gz -2 ${base}2_001.trimmed.fastq.gz --only-error-correction -o ./01_corrected_reads/${base}1_001.trimmed.corrected.fastq.gz -O ./01_corrected_reads/${base}2_001.trimmed.corrected.fastq.gz
+  	spades.py -1 ${base}1_001.trimmed.fastq.gz -2 ${base}2_001.trimmed.fastq.gz --only-error-correction -o . 
 done
 
 ### run SPAdes with BayesHammer-corrected reads and MismatchCorrector ###
 
-mkdir TF_assembly
-mkdir AF_assembly
+# one assembly per library provided
+# 2 for the female producing females (TF)
+# 1 for the male producing females (AF)
 
-# for TF
+
+#### for TF
 TF11="TF11_Chrysomya-rufifacies_S3_"
 TF19="TF19_Chrysomya-rufifacies_S4_"
-spades.py --pe1-1 "${TF11}"R1_001.trimmed.corrected.fastq.gz --pe1-2 "${TF19}"R1_001.trimmed.corrected.fastq.gz --pe2-1 "${TF11}"R2_001.trimmed.corrected.fastq.gz --pe2-2 "${TF19}"R2_001.trimmed.corrected.fastq.gz -o TF_assembly --threads 16 --isolate --mismatch-correction
 
-# for AF
+#TF11
+spades.py -1 ./corrected/${TF11}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${TF11}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --mismatch-correction
+
+#TF19
+spades.py -1 ./corrected/${TF19}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${TF19}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --mismatch-correction
+
+#### for AF
 AF="AF7_Chrysomya-rufifacies_S2_"
-spades.py -1 "${AF}"R1_001.trimmed.corrected.fastq.gz -2 "${AF}"R2_001.trimmed.corrected.fastq.gz -o AF_assembly --threads 16 --isolate --mismatch-correction
+spades.py -1 ./corrected/${AF}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${AF}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --mismatch-correction
 
 # remove all the trimmed reads
 rm *.trimmed.fastq.gz
@@ -66,7 +73,7 @@ rm *.trimmed.fastq.gz
 # log file
 rsync -av $SPADES/scripts/fastp.$JOB_ID.log $SPADES/logs
 
-# for the fastqc outputs (.html) / both pre and post trimming
+# the spades outputs 
 rsync -av * $SPADES/outputs
 
 rm -r *
