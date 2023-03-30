@@ -18,7 +18,7 @@ set -e # exit immediately on error
 
 # PATHS used in this script
 SCRATCH=/scratch/$USER/$JOB_ID/SPAdes 
-TRIMMED=/data/ross/flies/analyses/blowflies/01_QC_trimming/01_illumina_reads/outputs/02_trimmed_illumina
+TRIMMED=/data/ross/flies/raw/Chrysomya_rufifacies/illumina
 SPADES=/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades
 
 # get into the SPAdes conda enviroment

@@ -1,6 +1,0 @@
-sending incremental file list
-rsync: link_stat "/data/ross/flies/analyses/blowflies/01_QC_trimming/01_illumina_reads/outputs/02_trimmed_illumina/*.trimmed.fastq.gz" failed: No such file or directory (2)
-
-sent 18 bytes  received 12 bytes  60.00 bytes/sec
-total size is 0  speedup is 0.00
-rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1196) [sender=3.1.2]
