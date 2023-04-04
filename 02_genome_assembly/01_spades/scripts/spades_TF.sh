@@ -2,17 +2,19 @@
 #$ -V
 #$ -cwd
 #$ -j y
-#$ -o spades.$JOB_ID.log
+#$ -o spades_TF.$JOB_ID.log
 
 ### DESCRIPTION 
 
-# Date: 23.03.2023
+# Date: 4.4.2023
 # Author: Elpida Skarlou
 
 # This script performs genome assembly for Illumina sequencing data using SPAdes software. It first transfers trimmed Illumina reads to a temporary
-# directory, then performs two separate assemblies for two different sequencing libraries (TF11 and TF19), and one for AF library, respectively. The
-# output assemblies are synced to a final destination and temporary files are deleted. The input files are trimmed Illumina fastq files, and the output
-# files are genome assembly files.
+# directory, then performs two assemblies for two different sequencing libraries 
+# (TF11 and TF19). The output assembly are synced to a final destination and temporary 
+# files are deleted. 
+# The input files are; trimmed Illumina fastq files, and 
+# the output files are; genome assembly files.
 
 set -e # exit immediately on error
 
@@ -44,12 +46,15 @@ TF11="TF11_Chrysomya-rufifacies_S3_"
 TF19="TF19_Chrysomya-rufifacies_S4_"
 
 #  create a single assembly using the reads from both libraries (TF11 and TF19)
-spades.py --pe1-1 ./${TF19}R1_001.trimmed.fastq.gz --pe1-2 ./${TF19}R2_001.trimmed.fastq.gz --pe2-1 ./${TF11}R1_001.trimmed.fastq.gz --pe2-2 ./${TF11}R2_001.trimmed.fastq.gz -o . --threads 16 --only-assembler 
+# there will be one assembly for each library, because with both of them there is ~120x coverage
+# and maybe that cuases SPAdes to run out of memory ...
 
-#### for AF
-AF="AF7_Chrysomya-rufifacies_S2_"
+# TF 11
+spades.py -1 ./corrected/${TF11}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${TF11}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --only-assembler 
 
-spades.py -1 ./corrected/${AF}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${AF}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --only-assembler 
+# TF 19
+spades.py -1 ./corrected/${TF19}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${TF19}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --only-assembler 
+
 
 # remove all the trimmed reads
 rm *.trimmed.fastq.gz

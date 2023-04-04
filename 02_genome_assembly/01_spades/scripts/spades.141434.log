@@ -116,3 +116,24 @@ Default k-mer sizes were set to [21, 33, 55, 77] because estimated read length (
   0:59:01.754  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /scratch/eskarlou/141434/SPAdes/TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
   1:11:51.888  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 107)   Processed 268897443 reads
   1:33:14.709  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             :  97)   Processing /scratch/eskarlou/141434/SPAdes/TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+  2:14:10.128  9217M / 12G   INFO   K-mer Splitting          (kmer_data.cpp             : 112)   Total 485193452 reads processed
+  2:14:10.131     1M / 12G   INFO    General                 (kmer_index_builder.hpp    : 249)   Starting k-mer counting.
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+  2:14:10.973     1M / 12G   ERROR   General                 (mmapped_reader.hpp        :  52)   mmap(2) failed. Reason: Cannot allocate memory. Error code: 12
+
+
+== Error ==  system call for: "['/ceph/users/eskarlou/miniconda3/envs/SPAdes/bin/spades-hammer', '/scratch/eskarlou/141434/SPAdes/corrected/configs/config.info']" finished abnormally, OS return value: 12
+None
+
+In case you have troubles running SPAdes, you can write to spades.support@cab.spbu.ru
+or report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.
+
+SPAdes log can be found here: /scratch/eskarlou/141434/SPAdes/spades.log
+
+Thank you for using SPAdes!
