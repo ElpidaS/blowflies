@@ -60,7 +60,7 @@ for file in $(ls *1_001.fastq.gz)
 do
   base=$(basename $file "1_001.fastq.gz")
   cat ${base}1_001.fastq.gz ${base}2_001.fastq.gz > ${base}_files.fastq.gz
-  kmc -k21 -t30 -m64 -ci1 -cs10000 -fq ${base}_files.fastq.gz ${base}_kmer_counts ./kmc
+  kmc -k21 -t10 -m64 -ci1 -cs10000 -fq ${base}_files.fastq.gz ${base}_kmer_counts ./kmc   
   kmc_tools transform ${base}_kmer_counts histogram ${base}_kmer_k21.hist -cx100000
 done
 
@@ -71,12 +71,16 @@ done
 # copy genomescope.R to SCRATCH (.)
 cp /ceph/users/eskarlou/genomescope2.0/genomescope.R .
 
+conda activate for_genomescope
+
 mkdir genomescope
+
 
 for file in $(ls *.hist)
 do
-  genomescope.R -i ./kmc/$file -o ./genomescope -k 21
+  /ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript/genomescope.R -i ./kmc/$file -o ./genomescope -k 21
 done
+
 
 # syncing to final destinations #
 
