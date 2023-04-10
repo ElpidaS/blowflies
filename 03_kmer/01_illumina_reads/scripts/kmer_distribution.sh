@@ -75,10 +75,12 @@ conda activate for_genomescope
 
 mkdir genomescope
 
+# the command below follows the format bellow (suggested by the genimescope git hub)
+# $ Rscript genomescope.R histogram_file k-mer_length read_length output_dir [kmer_max] [verbose]
 
 for file in $(ls *.hist)
 do
-  /ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript/genomescope.R -i ./kmc/$file -o ./genomescope -k 21
+  /ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript/ genomescope.R -i ./kmc/$file -o ./genomescope -k 21
 done
 
 
