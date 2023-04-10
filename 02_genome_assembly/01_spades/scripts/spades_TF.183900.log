@@ -1,0 +1,14 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.trimmed.fastq.gz
+rsync: stat "/scratch/eskarlou/183900/SPAdes/.TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz.9L69pA" failed: No such file or directory (2)
+rsync: rename "/scratch/eskarlou/183900/SPAdes/.TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz.9L69pA" -> "TF19_Chrysomya-rufifacies_S4_R1_001.trimmed.fastq.gz": No such file or directory (2)
+rsync: mkstemp "/scratch/eskarlou/183900/SPAdes/.TF19_Chrysomya-rufifacies_S4_R2_001.trimmed.fastq.gz.HQD5GA" failed: No such file or directory (2)
+
+sent 56,979,636,631 bytes  received 633 bytes  114,994,222.53 bytes/sec
+total size is 56,965,728,373  speedup is 1.00
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1196) [sender=3.1.2]

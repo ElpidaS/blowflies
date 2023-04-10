@@ -44,7 +44,7 @@ rsync -av $TRIMMED/*.trimmed.fastq.gz .
 #### for AF
 AF="AF7_Chrysomya-rufifacies_S2_"
 
-spades.py -1 ./corrected/${AF}R1_001.trimmed.corrected.fastq.gz -2 ./corrected/${AF}R2_001.trimmed.corrected.fastq.gz -o . --threads 16 --isolate --only-assembler 
+spades.py -1 ./${AF}R1_001.trimmed.fastq.gz -2 ./${AF}R2_001.trimmed.fastq.gz -o . --threads 16 --isolate --only-assembler  
 
 # remove all the trimmed reads
 rm *.trimmed.fastq.gz
