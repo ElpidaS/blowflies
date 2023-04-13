@@ -45,10 +45,6 @@ rsync -av $PIC_ILLUMINA/*.fastq.gz .
 ### KMC ### 
 # count k-mers in FASTQ files
 
-mkdir kmc
-
-# conda activate
-
 # initialize conda
 eval "$(conda shell.bash hook)"
 
@@ -60,7 +56,7 @@ for file in $(ls *1_001.fastq.gz)
 do
   base=$(basename $file "1_001.fastq.gz")
   cat ${base}1_001.fastq.gz ${base}2_001.fastq.gz > ${base}_files.fastq.gz
-  kmc -k21 -t10 -m64 -ci1 -cs10000 -fq ${base}_files.fastq.gz ${base}_kmer_counts ./kmc   
+  kmc -k21 -t10 -m64 -ci1 -cs10000 -fq ${base}_files.fastq.gz ${base}_kmer_counts .  
   kmc_tools transform ${base}_kmer_counts histogram ${base}_kmer_k21.hist -cx100000
 done
 
@@ -73,27 +69,27 @@ cp /ceph/users/eskarlou/genomescope2.0/genomescope.R .
 
 conda activate for_genomescope
 
-mkdir genomescope
 
 # the command below follows the format bellow (suggested by the genimescope git hub)
 # $ Rscript genomescope.R histogram_file k-mer_length read_length output_dir [kmer_max] [verbose]
 
-for file in $(ls *.hist)
-do
-  /ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript/ genomescope.R -i ./kmc/$file -o ./genomescope -k 21
-done
+# TF11
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF11_Chrysomya-rufifacies_S3_R_kmer_k21.hist -o ./ -k 21
 
+# TF19
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF19_Chrysomya-rufifacies_S4_R_kmer_k21.hist -o ./ -k 21
+
+# AF
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i AF7_Chrysomya-rufifacies_S2_R_kmer_k21.hist -o ./ -k 21
 
 # syncing to final destinations #
 
 # log file
 mv $KMER/scripts/kmer.$JOB_ID.log $KMER/logs
 
-# kmc
-rsync -av ./kmc $KMER/outputs/
+rm -rf *.gz
 
-# genomescope
-rsync -av ./genomescope $KMER/outputs/
+rsync -av . $KMER/outputs/
 
 rm -rf *
 rm -rf /scratch/$USER/$JOB_ID
