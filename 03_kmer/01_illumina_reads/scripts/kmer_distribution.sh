@@ -41,7 +41,8 @@ cd $SCRATCH
 # transfer $TRIMMED/*.trimmed.fastq.gz to $PWD
 rsync -av $PIC_ILLUMINA/*.fastq.gz .
 
-
+# copy genomescope.R to SCRATCH (.)
+cp /ceph/users/eskarlou/genomescope2.0/genomescope.R .
 ### KMC ### 
 # count k-mers in FASTQ files
 
@@ -58,9 +59,8 @@ do
   # combine fasta.gz
   cat ${base}1_001.fastq.gz ${base}2_001.fastq.gz > ${base}_files.fastq.gz
   # count  kmers
-  kmc -k21 -t10 -m64 -ci1 -cs10000 -fq ${base}_files.fastq.gz ${base}_kmer_counts .  
-  kmc_tools transform ${base}_kmer_counts* histogram ${base}_kmer_k21.histo -cx100000 #use all the counts files and produce a .histo file
-done
+  kmc -k21 -t10 -m64 -ci1 -cs10000 -fq1 ${base}_files.fastq.gz ${base}_kmer_counts .  # use fq1 for fastq.gz input files
+  kmc_tools transform ${base}_kmer_counts.kmc_pre_hist histogram ${base}_kmer_k21.histo -cx100000 # use counts.kmc_pre_hist file to produce .histo file
 
 
 ### Genome Scope 2 ### 
