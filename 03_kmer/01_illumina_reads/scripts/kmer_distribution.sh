@@ -61,7 +61,7 @@ do
   # count  kmers
   kmc -k21 -t10 -m64 -ci1 -cs10000 -fq1 ${base}_files.fastq.gz ${base}_kmer_counts .  # use fq1 for fastq.gz input files
   kmc_tools transform ${base}_kmer_counts.kmc_pre_hist histogram ${base}_kmer_k21.histo -cx100000 # use counts.kmc_pre_hist file to produce .histo file
-
+done
 
 ### Genome Scope 2 ### 
 # produces a report and several informative plots describing the genome properties

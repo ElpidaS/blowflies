@@ -1,0 +1,11 @@
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R1_001.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R1_001.fastq.gz
+TF19_Chrysomya-rufifacies_S4_R2_001.fastq.gz
+
+sent 60,718,083,809 bytes  received 130 bytes  110,698,421.04 bytes/sec
+total size is 60,703,263,162  speedup is 1.00
+/var/spool/gridengine/execd/bigfoot/job_scripts/184369: line 98: syntax error: unexpected end of file
