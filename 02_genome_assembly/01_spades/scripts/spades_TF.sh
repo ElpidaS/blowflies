@@ -6,15 +6,18 @@
 
 ### DESCRIPTION 
 
-# Date: 4.4.2023
+# Date: 18.4.2023
 # Author: Elpida Skarlou
 
-# This script performs genome assembly for Illumina sequencing data using SPAdes software. It first transfers trimmed Illumina reads to a temporary
-# directory, then performs one assembly for two different sequencing libraries 
-# (TF11 and TF19). The output assembly are synced to a final destination and temporary 
-# files are deleted. 
-# The input files are; trimmed Illumina fastq files, and 
-# the output files are; genome assembly files.
+# Short summary #
+# This shell script is designed to run the SPAdes genome assembler on Illumina sequencing data for the blowfly Chrysomya rufifacies, specifically two libraries called TF11 and TF19.
+
+# Input for this script is a directory containing trimmed Illumina reads for Chrysomya rufifacies stored in the variable $TRIMMED. The script transfers the trimmed reads from the specified directory to a scratch directory ($SCRATCH) where the assembly will be performed.
+
+# Output of this script is a genome assembly produced by SPAdes, which combines the reads from the TF11 and TF19 libraries, along with a log file and other intermediate files. The resulting assembly is transferred to the output directory specified in the variable $SPADES/outputs.
+
+################################################################3333
+
 
 set -e # exit immediately on error
 
@@ -56,7 +59,7 @@ rm *.trimmed.fastq.gz
 # syncing to final destinations
 
 # log file
-rsync -av $SPADES/scripts/fastp.$JOB_ID.log $SPADES/logs
+rsync -av $SPADES/scripts/spades_TF.$JOB_ID.log $SPADES/logs # be careful with the directories because if it crush there the files does not get transfered
 
 # the spades outputs 
 rsync -av * $SPADES/outputs
