@@ -72,18 +72,26 @@ cp /ceph/users/eskarlou/genomescope2.0/genomescope.R .
 
 conda activate for_genomescope
 
+# By creating those directories you the plots of each library will not over-write the one before that. As was the case when all the outputs were sent
+# in the same output dirrectory
+mkdir TF11_plots
+mkdir TF19_plots
+mkdir AF7_plots
 
 # the command below follows the format bellow (suggested by the genimescope git hub)
 # $ Rscript genomescope.R histogram_file k-mer_length read_length output_dir [kmer_max] [verbose]
 
+# the use of -l 40 is sugistified for the Andere et al. 2020 paper and the coverage that they reported
+
 # TF11
-/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF11_Chrysomya-rufifacies_S3_R_kmer_k21.histo -o ./ -k 21
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF11_Chrysomya-rufifacies_S3_R_kmer_k21.histo -o ./TF11_plots -k 21 -l 34
 
 # TF19
-/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF19_Chrysomya-rufifacies_S4_R_kmer_k21.histo -o ./ -k 21
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i TF19_Chrysomya-rufifacies_S4_R_kmer_k21.histo -o ./TF19_plots -k 21 -l 34
 
 # AF
-/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i AF7_Chrysomya-rufifacies_S2_R_kmer_k21.histo -o ./ -k 21
+/ceph/users/eskarlou/miniconda3/envs/for_genomescope/bin/Rscript genomescope.R -i AF7_Chrysomya-rufifacies_S2_R_kmer_k21.histo -o ./AF7_plots -k 21 -l 43
+
 
 # syncing to final destinations #
 
