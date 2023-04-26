@@ -1,0 +1,8 @@
+sending incremental file list
+contigs.fasta
+
+sent 752,969,797 bytes  received 35 bytes  100,395,977.60 bytes/sec
+total size is 752,785,895  speedup is 1.00
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
