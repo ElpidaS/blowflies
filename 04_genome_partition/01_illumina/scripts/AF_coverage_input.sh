@@ -2,11 +2,12 @@
 #$ -V
 #$ -cwd
 #$ -j y
-#$ -o AF_Inputblob.$JOB_ID.log
+#$ -o AF_coverage.$JOB_ID.log
 
 ### Description 
 # Main goal; 
-# Produce the 2 main files (coverage and hits) needed to run Blobtools
+# COVERAGE FILES
+# Produce oen of the 2 main files (coverage and hits) needed to run Blobtools
 
 # More specifically; 
 # Based on the script, it looks like the goal is 
@@ -23,7 +24,7 @@
 set -e # exit immediately on error
 
 # PATHS used in this script
-SCRATCH=/scratch/$USER/$JOB_ID/SPAdes
+SCRATCH=/scratch/$USER/$JOB_ID/Coverage
 AF_ASSEMBLY=/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/AF_assembly/
 TRIMMED_READS=/data/ross/flies/raw/Chrysomya_rufifacies/illumina/
 GENOME_PART=/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/
@@ -31,11 +32,10 @@ GENOME_PART=/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/
 # make $SCRATCH if it doesn't exist
 mkdir -p $SCRATCH 
 mkdir $SCRATCH/coverage_file
-mkdir $SCRATCH/hits_file
 
 # Some extra PATHS
 COVERAGE=$SCRATCH/coverage_file
-HITS=$SCRATCH/hits_file
+
 
 # rsync usefull input to working directory 
 rsync -av $AF_ASSEMBLY/contigs.fasta $COVERAGE
@@ -76,17 +76,6 @@ rsync -av $TRIMMED_READS/AF* $COVERAGE
 	samtools sort -o AFmapping.sorted.bam AFmappings.bam
 	samtools index AFmapping.sorted.bam
 
-### one (or more) hits file(s), e.g. example/blast.out (have to download)
-	conda activate BLAST
-	cd $HITS
-
-	blastn \
-	 -query $COVERAGE/contigs.fasta \
-	 -db nt \
-	 -outfmt '6 qseqid staxids bitscore std' \
-	 -max_target_seqs 1 \
-	 -max_hsps 1 \
-	 -evalue 1e-25
 
 # Post-code stuff
 
@@ -95,10 +84,10 @@ rm -rf $COVERAGE/contigs.fasta
 rm -rf $COVERAGE/*fastq.gz
 
 # log file
-mv -av $GENOME_PART/scripts/AF_Inputblob.$JOB_ID.log $GENOME_PART/logs
+mv -av $GENOME_PART/scripts/AF_coverage.$JOB_ID.log $GENOME_PART/logs
 
 # rsync all the outputs 
-rsync -av * $GENOME_PART/outputs
+rsync -av $COVERAGE $GENOME_PART/outputs/AF_out/
 
 rm -r *
 rm -rf /scratch/$USER/$JOB_ID
