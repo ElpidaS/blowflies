@@ -2,7 +2,7 @@
 #$ -V
 #$ -cwd
 #$ -j y
-#$ -o AF_hits.$JOB_ID.log
+#$ -o TF_hits.$JOB_ID.log
 #$ -M elpida.skarlou@evobio.eu
 
 
@@ -19,7 +19,7 @@
 # file contains information about homology to other sequences in a reference database.
 
 # Author; Elpida Skarlou
-# Date; 01/05/2023
+# Date; 05/05/2023
 
 ### Precode stuff
 
@@ -27,7 +27,7 @@ set -e # exit immediately on error
 
 # PATHS used in this script
 SCRATCH=/scratch/$USER/$JOB_ID/hits
-AF_ASSEMBLY=/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/AF_assembly/
+TF_ASSEMBLY=/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/TF_assembly/
 TRIMMED_READS=/data/ross/flies/raw/Chrysomya_rufifacies/illumina/
 GENOME_PART=/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/
 
@@ -37,7 +37,7 @@ mkdir -p $SCRATCH
 
 cd $SCRATCH
 
-rsync -av $AF_ASSEMBLY/contigs.fasta $SCRATCH
+rsync -av $TF_ASSEMBLY/contigs.fasta $SCRATCH
 
 ### one (or more) hits file(s), e.g. example/blast.out (have to download)
 	source /ceph/users/eskarlou/miniconda3/etc/profile.d/conda.sh
@@ -53,10 +53,10 @@ blastn -query contigs.fasta -db /ceph/software/databases/ncbi/nt -outfmt '6 qseq
 rm -rf $SCRATCH/contigs.fasta
 
 # log file
-mv $GENOME_PART/scripts/AF_hits.$JOB_ID.log $GENOME_PART/logs
+mv $GENOME_PART/scripts/TF_hits.$JOB_ID.log $GENOME_PART/logs
 
 # rsync all the outputs 
-rsync -av $SCRATCH $GENOME_PART/outputs/AF_out/
+rsync -av $SCRATCH $GENOME_PART/outputs/TF_out/
 
 
 
