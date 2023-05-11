@@ -109,7 +109,11 @@ rm -rf $SCRATCH/blastAF.out
 rm -rf $SCRATCH/blobtools
 
 # move log file 
+<<<<<<< HEAD
 mv $GENOME_PART/scripts/AF/AF_prepart.$JOB_ID.log $GENOME_PART/logs
+=======
+mv $GENOME_PART/scripts/AF_prepart.$JOB_ID.log $GENOME_PART/logs
+>>>>>>> 0878881e30162fec2dd8ff37af3639cc22ecdd6c
 
 # rsync all the outputs 
 rsync -av $SCRATCH/* $AF_PART
