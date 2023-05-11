@@ -12,15 +12,17 @@
 
 4. to explore any **potential genetic differences between the sexes**
 
----
+--- 
 
-# <u>Chapter 0</u> *Prepartion*
+# <u>Chapter 0</u> Prepartion
+
+---
 
 ## 0.1 Quality Control &Trimming
 
 > The **main aim** of this step is to "produce" the best possible quality of reads from the raw reads, in order to use them for dowstream analysis
 
-##### 0.1.1 Illumina Reads
+**0.1.1 Illumina Reads**
 
 In this step we used;
 
@@ -38,7 +40,7 @@ In this step we used;
 | Output            | `/data/ross/flies/analyses/blowflies/01_QC_trimming/01_illumina_reads/outputs/01_QC/` | QC (.html files)         |
 |                   | `/data/ross/flies/raw/Chrysomya_rufifacies/illumina/`                                 | trimmed reads (fastq.gz) |
 
-### Analysis
+##### Analysis
 
 Both `fastp `and `fastqc `versions used in this study were downloaded by using *anaconda* (https://anaconda.org/). 
 
@@ -80,7 +82,7 @@ fastqc -t 4 *.trimmed.fastq.gz
 
 - The plots belows are representative of all the available, so for saving space, we only depict the plots from the forward reads of one individual (TF19 R1)
 
-<img title="" src="file:///C:/Users/Elpida/AppData/Roaming/marktext/images/2023-04-21-16-31-50-image.png" alt="" width="548">
+<img title="" src="file:///C:/Users/Elpida/AppData/Roaming/marktext/images/2023-04-21-16-31-50-image.png" alt="" width="525">
 
 Per sequence GC content plot | We notice the pressence of three peaks insdead of one. That suggests the presence of **condamination**, so we decided to move forward examining this scenarion by using `bloptools`.
 
@@ -92,7 +94,7 @@ Sequence Duplication Levels | We notice that there is a 10% of the total sequenc
 
 Adapter content | the adapter remove part was successful for the reads. As in all cases in the trimmed reads the ONLY visible lines are the ones that represent the polyA and polyG.
 
-#### 0.2 Genome Assembly
+## 0.2 Genome Assembly
 
 > The **aim** of this step was to create two assembled genomes, one for the AF individuals and one for the TF. For the TF individuals we used 2 illumina libraries to create the assemblies.
 
@@ -110,7 +112,7 @@ In this step we used;
 | Scripts           | `/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/scripts` | 2 scripts; 1 for TF (female prod) & 1 AF (male prod) |
 | Output            | `/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs` | 2 (AF and TF) folders with spades outputs            |
 
-### Analysis
+##### Analysis
 
 I did not perform any correction, that were suggested in SPAdes website because of memmory problems, plus illumina is high accurate allready.
 
@@ -181,7 +183,193 @@ Gaps = 0
 
 similar results with the one above 
 
-#### 1.1 Kmer analysis
+## 0.3 Condamination detection
+
+> From the QC chapter we got the suspision for the presence of DNA condamition (GC % plot). As a result we decided to go forward with examing this possibility by using `blobtools`.  `blobtools` (https://blobtools.readme.io/docs/my-first-blobplot) need two type of input data ( 1. coverage file(s) and 2. hit(s) file(s)). 
+
+In this step we used; 
+
+- `bowtie2` v. 2.2.5 ([GitHub - BenLangmead/bowtie2: A fast and sensitive gapped read aligner](https://github.com/BenLangmead/bowtie2)) an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.
+- `samtools` v. 1.6 ([GitHub - samtools/samtools: Tools (written in C using htslib) for manipulating next-generation sequencing data](https://github.com/samtools/samtools)) tools for handling SAM, BAM, CRAM
+- `blastn` v. 2.12.0 ([Command Line BLAST &#8211; A Primer for Computational Biology](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/)) 
+- **blobtools**
+  - conda enviroment which was created by executing **Option A** as depicted in [GitHub - DRL/blobtools: Modular command-line solution for visualisation, quality control and taxonomic partitioning of genome datasets](https://github.com/DRL/blobtools) + conda download samstools (which have to be the same version as the one used to create the .bam files in the coverage files step)
+    - some important packages used `pysam` v. 0.15.3 and `python` v. 3.7.16 (at least 3.7, so `pysam` works)
+  - `/ceph/users/eskarlou/blobtools` downloaded by using 
+    `git clone https://github.com/DRL/blobtools.git` on 25th April 2023
+
+**Directories**
+
+| Type of Directory | Directory                                                                                                                                                                                                                                                                                                                                                                                                                         | Description                                       |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Input             | **for coverage files**<br/>`/data/ross/flies/raw/Chrysomya_rufifacies/illumina/`<br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/`<br/>**for hits files** <br/>`/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/`<br/>**for blobplots**<br/> - coverage & hits files (see above)<br/> - NCBI taxonomy names + nodes files `/data/ross/flies/analyses/blowflies/05_NCBI_taxdump` |                                                   |
+| Script            | `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/AF`<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/TF`                                                                                                                                                                                                                                                            | 3 scripts (2 for input and one for the blobtools) |
+| Output            | **for coverage files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/coverage_file` <br/> **for hits files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/hits_file`<br/>**for blobplots**<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/pre_partition/`          |                                                   |
+
+Workflow A was used in this project ![4476](https://files.readme.io/21ef680-figure_1.png)
+
+## Input files for blobplots
+
+### 1st Coverage files
+
+The file (e.g. `mapping_1.bam`) contains information regarding the base/read coverage of each sequence in an [assembly file](https://blobtools.readme.io/docs/assembly-file). Assuming an unbiased sequencing process, the base/read coverage reflects the **molarity**of the DNA molecule (represented by the sequence in the assembly) that went into the sequencing reaction.
+
+*The example here is for AF but the same code was used for TF*
+
+Firstly, index the asssembly genome (e.g. `contig.fasta`) by using bowtie2. 
+
+```bash
+bowtie2-build contigs.fasta AFcontigs_index
+```
+
+Then, align the reads used for the de-novo assembly (i.e. `contig.fasta`) to the assembly itself.  The output is the `.sam` file.
+
+```bash
+bowtie2 -x AFcontigs_index \
+-1 AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz \
+-2 AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz \
+-S AFmappings.sam
+```
+
+convert the `.sam` file to a `.bam` one by using `samtools`
+
+```bash
+samtools view -b -o AFmappings.bam AFmappings.sam
+```
+
+The next two final commands take the `.bam` file and create a sorted and indexed BAM file in order to create the coverage file "mapping.sorted.bam".
+
+```bash
+samtools sort -o AFmapping.sorted.bam AFmappings.bam
+samtools index AFmapping.sorted.bam
+```
+
+### 2nd Hit files
+
+(https://blobtools.readme.io/docs/taxonomy-file)
+
+For `blobtools` to assign taxonomies and thereafter "represent" the contamination, it uses **hit files** (`blast.out`) as an input.
+
+To produce those hits files (in TSV format; more in https://blobtools.readme.io/docs/taxonomy-file) we performed a `blastn`. 
+
+- Important coding tip; `blast` default version was 2.5.0 but it didn't work with the database available in `/ceph/software/databases/ncbi` (which we used for our `blastn`). To update `blastn` run `conda install -c bioconda blast==2.12.0`,  the important part is the `==` instead of `=`.
+
+```bash
+blastn -query contigs.fasta -db /ceph/software/databases/ncbi/nt -outfmt '6 qseqid staxids bitscore std' -max_target_seqs 1 -max_hsps 1 -evalue 1e-25 -num_threads 4
+```
+
+- `blastn`: This is the name of the BLASTN program that is being run.
+
+- `-query contigs.fasta`: This specifies the name of the query file, which contains the sequences to be searched against the database.
+
+- `-db /ceph/software/databases/ncbi/nt`: This specifies the name and location of the database that will be searched, which is the NCBI nt nucleotide database available/downloaded in Ashworth cluster.
+
+- `-outfmt '6 qseqid staxids bitscore std'`: This specifies the format of the output file. In this case, the output will be in tab-delimited format, and will include the query sequence ID (qseqid), the taxonomic IDs of the hit sequences (staxids), the bitscore, and the standard deviation of the bitscore (std).
+
+- `-max_target_seqs 1`: This specifies the maximum number of hits to return for each query sequence. In this case, only the top hit will be returned.
+
+- `-max_hsps 1`: This specifies the maximum number of high-scoring segment pairs (HSPs) to return for each hit. In this case, only the top HSP will be returned.
+
+- `-evalue 1e-25`: This specifies the e-value threshold for reporting hits. Hits with e-values greater than this threshold will not be reported.
+
+- `-num_threads 4`: This specifies the number of threads or processors to use for the search. In this case, 4 threads will be used.
+
+### 3rd NCBI taxonomy names + nodes files
+
+- `--names`: This flag is used to specify the NCBI taxonomy names file (`names.dmp`) that contains the scientific names of the taxonomic groups.
+- `--nodes`: This flag is used to specify the NCBI taxonomy nodes file (`nodes.dmp`) that provides the hierarchical structure of the taxonomic groups.
+
+In order to get the files needed by flags `--names` and `--nodes` in `blobtools create`
+
+we downloaded the `taxdump.tar.gz`
+
+```bash
+# paste the link on your internet browser
+//ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz
+
+# upload taxdump.tar.gz in the cluster 
+
+# Extract files 
+tar -xvzf taxdump.tar.gz
+```
+
+The `names.dmp` and `nodes.dmp` files will be located in the directory used 
+
+## Blobtools; Pre-partition
+
+Based on the **workflow A** we executed *step 1* and *2*. 
+
+***Step 1***
+
+```bash
+./blobtools create -i assembly.fasta -b sorted.bam -t blast.out -o my_blobplot --names names.dmp --nodes nodes.dmp
+```
+
+- `-i assembly.fasta`: Use the `assembly.fasta` file as the input assembly file.
+- `-b sorted.bam`: Use the `sorted.bam` file as the input sorted alignment file in BAM format. The .bam.bai file should be in the same directory, when the command is executed
+- `-t blast.out`: Use the `blast.out` file as the input file containing blast results.
+- `-o my_blobplot`: Save the output files to the directory named `my_blobplot`.
+- `--names names.dmp`: Use the `names.dmp` file as the taxonomic names file.
+- `--nodes nodes.dmp`: Use the `nodes.dmp` file as the taxonomic nodes file.
+
+Output; 
+
+- `myblobplot.blobDB.json`  is a JSON (JavaScript Object Notation) file that contains a database of information about the genomic data analyzed by `blobtools`. This database contains information on the sequences in the genome assembly, including their length, taxonomic classification, and read coverage.
+
+***Step 2***
+
+```bash
+# create Blobplot and Cov plot
+./blobtools plot -i my_blobplot.blobDB.json -o ./
+# create table
+./blobtools view -i my_blobplot.blobDB.json -o ./
+```
+
+Output (./blobtools plot);
+
+- `.blobplot.bam0.png` blopplot
+
+- `blobplot.read_cov.bam0.png` readcov plot
+
+- `.cov` cov plot
+
+- `.blobplot.stats.txt` summary info of the above
+
+**AF Blobplot + Cov read**
+
+![](C:\Users\Elpida\AppData\Roaming\marktext\images\2023-05-11-15-37-34-image.png)
+
+![](C:\Users\Elpida\AppData\Roaming\marktext\images\2023-05-11-15-38-07-image.png)
+
+**TF Blobplot + read plot**
+
+![](C:\Users\Elpida\AppData\Roaming\marktext\images\2023-05-11-18-16-12-image.png)
+
+![](C:\Users\Elpida\AppData\Roaming\marktext\images\2023-05-11-18-17-17-image.png)
+
+In both of them, more than half of the assembly is a no-hit. But they have the same GC content as the arthropoda. So it should be that those contigs fly dna but the contigs are so small (N50 ~1000 nt) to be taxonomized.
+
+Question rised; 
+
+- the biased GC content find previously was biased on the left not the right like here...
+
+- the contamination does not seem to be that much (3%)
+
+- the problem is the no-hit which I guess has to do with the fact that we are talking about an illumina assembly...
+
+-  should focus on the cleaning reads in order to have a descent kmer plot
+
+Output (./blobtools view);
+
+- `blobDB.table.txt`
+
+# <u>Chapter 1</u>
+
+# Differences between the two types of females
+
+---
+
+## 1.1 Kmer analysis
 
 > the main aim of this part was to examine the heterozygosity levels of the females and check our hypothesis of the presence of a inversion in the female producing females
 
@@ -191,15 +379,17 @@ In this step we used
 
 - `genomescope.R` ([GitHub - tbenavi1/genomescope2.0: Reference-free profiling of polyploid genomes](https://github.com/tbenavi1/genomescope2.0)). GenomeScope 2.0 uses the k-mer count distribution, e.g. from KMC or Jellyfish, and produces a report and several informative plots describing the genome properties.
 
-#### 0.1.1.1 Use raw reads (contamination + PCR)
+#### 1.1.1 Use raw reads (contamination + PCR)
 
-| Type of Directory | Directory                                                                           | Description                    |
-| ----------------- | ----------------------------------------------------------------------------------- | ------------------------------ |
-| Input             | `/data/ross/sequencing/raw/blowflies/picard_lab_illumina`                           | raw illumina reads             |
-| Script            | `/data/ross/flies/analyses/blowflies/03_kmer/01_illumina_reads/scripts/`            | script                         |
-| Output            | `/data/ross/flies/analyses/blowflies/03_kmer/01_illumina_reads/outputs/kmer_reads/` | output from raw illumina reads |
+**Directories**
 
-### Analysis
+| Type of Directory | Directory                                                                | Description                    |
+| ----------------- | ------------------------------------------------------------------------ | ------------------------------ |
+| Input             | `/data/ross/sequencing/raw/blowflies/picard_lab_illumina`                | raw illumina reads             |
+| Script            | `/data/ross/flies/analyses/blowflies/03_kmer/01_illumina_reads/scripts/` | script                         |
+| Output            | `/data/ross/flies/analyses/blowflies/03_kmer/01_illumina_reads/outputs`  | output from raw illumina reads |
+
+##### Analysis
 
 With this analysis we wanted to explore the structure of the genome of the two types of females. Using k-mer distributiond plots (provided by `genomescope`) we can make inference regarding the aploidy and the heteroplasmy of the organism. Each peak represent a level of ploidy e.g. two peaks = diploid organism. In the case of diploid organisms, the frequency hight of each peak can give us information about the leve of heterogenity. So in our case, if there is an inversion that includes the sex determing area,  that inversion should be more diverge/heterozygous that the rest of the non-inversed genome. Thus, we expect that the first peak (heterozygosity peak) will be higher in individuals that posses the inversion (TF) than the ones that do not (AF). See figure below.
 
@@ -251,15 +441,13 @@ The we created a `GenomScope` plot for each library by executing the code below.
 
 - `-l 34`  initial guess for the average k-mer coverage of the sequencing
 
-AF individual
+**TF individual**
 
-One of the TF individuals
+<img src="file:///C:/Users/Elpida/AppData/Roaming/marktext/images/2023-05-11-11-21-08-image.png" title="" alt="" width="335">
+
+**AF individuals**
+
+<img title="" src="file:///C:/Users/Elpida/AppData/Roaming/marktext/images/2023-05-11-11-20-34-image.png" alt="" width="344">
 
 - Regarding the two peaks right of the main one; (from [UCD Bioinformatics Core Workshop](https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/kmers/kmers)) ->  *are the duplicated heterozygous regions and duplicated homozygous regions and correspond to two smaller peaks. The shape of these peaks are affected by the sequencing errors and sequencing duplicates.*
 - The assumption of the presence of PCR does not allow us to make any inferences. As PCR can induce non-biological uneven coverage.
-
-WHAT to do; 
-
-run the kmc in the assembly ?
-
-- 1st take out the contamination 2nd run kmc with the assemblies as input (-fa flag for fasta files) -> That does not make any sence, as the assembly is only a haplotipic representation of the organism's genome !

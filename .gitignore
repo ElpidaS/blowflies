@@ -1,2 +1,3 @@
 # Ignore subdirectories
 **/outputs
+/data/ross/flies/analyses/blowflies/05_NCBI_taxdump
