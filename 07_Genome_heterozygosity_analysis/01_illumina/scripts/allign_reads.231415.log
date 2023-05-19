@@ -1,0 +1,392 @@
+sending incremental file list
+AF_contig.filtered.fasta
+
+sent 449,139,673 bytes  received 35 bytes  179,655,883.20 bytes/sec
+total size is 449,029,920  speedup is 1.00
+sending incremental file list
+TF_contig.filtered.fasta
+
+sent 435,203,616 bytes  received 35 bytes  290,135,767.33 bytes/sec
+total size is 435,097,263  speedup is 1.00
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+
+sent 22,406,799,752 bytes  received 54 bytes  117,006,787.50 bytes/sec
+total size is 22,401,330,441  speedup is 1.00
+sending incremental file list
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+
+sent 19,119,843,066 bytes  received 54 bytes  116,940,936.51 bytes/sec
+total size is 19,115,176,042  speedup is 1.00
+Settings:
+  Output files: "AF_genome_index.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  AF_contig.filtered.fasta
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:04
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:06
+bmax according to bmaxDivN setting: 107525931
+Using parameters --bmax 80644449 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 80644449 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:14
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:03
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:06
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 4.30104e+08 (target: 80644448)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 430103725 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:03:17
+Returning block of 430103726 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 153698142
+fchr[G]: 213304569
+fchr[T]: 273084383
+fchr[$]: 430103725
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 173286210 bytes to primary EBWT file: AF_genome_index.1.bt2
+Wrote 107525936 bytes to secondary EBWT file: AF_genome_index.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 430103725
+    bwtLen: 430103726
+    sz: 107525932
+    bwtSz: 107525932
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 26881483
+    offsSz: 107525932
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 2240124
+    numLines: 2240124
+    ebwtTotLen: 143367936
+    ebwtTotSz: 143367936
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:04:56
+Reading reference sizes
+  Time reading reference sizes: 00:00:04
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:05
+  Time to reverse reference sequence: 00:00:01
+bmax according to bmaxDivN setting: 107525931
+Using parameters --bmax 80644449 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 80644449 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:15
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:04
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:06
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 4.30104e+08 (target: 80644448)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 430103725 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:03:15
+Returning block of 430103726 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 153698142
+fchr[G]: 213304569
+fchr[T]: 273084383
+fchr[$]: 430103725
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 173286210 bytes to primary EBWT file: AF_genome_index.rev.1.bt2
+Wrote 107525936 bytes to secondary EBWT file: AF_genome_index.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 430103725
+    bwtLen: 430103726
+    sz: 107525932
+    bwtSz: 107525932
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 26881483
+    offsSz: 107525932
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 2240124
+    numLines: 2240124
+    ebwtTotLen: 143367936
+    ebwtTotSz: 143367936
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:04:51
+Settings:
+  Output files: "TF_genome_index.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  TF_contig.filtered.fasta
+Building a SMALL index
+Reading reference sizes
+  Time reading reference sizes: 00:00:05
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:05
+bmax according to bmaxDivN setting: 104659892
+Using parameters --bmax 78494919 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 78494919 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:14
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:03
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:06
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 4.1864e+08 (target: 78494918)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 418639571 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:03:03
+Returning block of 418639572 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 149864256
+fchr[G]: 207686419
+fchr[T]: 265607907
+fchr[$]: 418639571
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 166101367 bytes to primary EBWT file: TF_genome_index.1.bt2
+Wrote 104659900 bytes to secondary EBWT file: TF_genome_index.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 418639571
+    bwtLen: 418639572
+    sz: 104659893
+    bwtSz: 104659893
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 26164974
+    offsSz: 104659896
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 2180415
+    numLines: 2180415
+    ebwtTotLen: 139546560
+    ebwtTotSz: 139546560
+    color: 0
+    reverse: 0
+Total time for call to driver() for forward index: 00:04:36
+Reading reference sizes
+  Time reading reference sizes: 00:00:04
+Calculating joined length
+Writing header
+Reserving space for joined string
+Joining reference sequences
+  Time to join reference sequences: 00:00:05
+  Time to reverse reference sequence: 00:00:00
+bmax according to bmaxDivN setting: 104659892
+Using parameters --bmax 78494919 --dcv 1024
+  Doing ahead-of-time memory usage test
+  Passed!  Constructing with these parameters: --bmax 78494919 --dcv 1024
+Constructing suffix-array element generator
+Building DifferenceCoverSample
+  Building sPrime
+  Building sPrimeOrder
+  V-Sorting samples
+  V-Sorting samples time: 00:00:13
+  Allocating rank array
+  Ranking v-sort output
+  Ranking v-sort output time: 00:00:03
+  Invoking Larsson-Sadakane on ranks
+  Invoking Larsson-Sadakane on ranks time: 00:00:05
+  Sanity-checking and returning
+Building samples
+Reserving space for 12 sample suffixes
+Generating random suffixes
+QSorting 12 sample offsets, eliminating duplicates
+QSorting sample offsets, eliminating duplicates time: 00:00:00
+Multikey QSorting 12 samples
+  (Using difference cover)
+  Multikey QSorting samples time: 00:00:00
+Calculating bucket sizes
+Splitting and merging
+  Splitting and merging time: 00:00:00
+Avg bucket size: 4.1864e+08 (target: 78494918)
+Converting suffix-array elements to index image
+Allocating ftab, absorbFtab
+Entering Ebwt loop
+Getting block 1 of 1
+  No samples; assembling all-inclusive block
+  Sorting block of length 418639571 for bucket 1
+  (Using difference cover)
+  Sorting block time: 00:02:59
+Returning block of 418639572 for bucket 1
+Exited Ebwt loop
+fchr[A]: 0
+fchr[C]: 149864256
+fchr[G]: 207686419
+fchr[T]: 265607907
+fchr[$]: 418639571
+Exiting Ebwt::buildToDisk()
+Returning from initFromVector
+Wrote 166101367 bytes to primary EBWT file: TF_genome_index.rev.1.bt2
+Wrote 104659900 bytes to secondary EBWT file: TF_genome_index.rev.2.bt2
+Re-opening _in1 and _in2 as input streams
+Returning from Ebwt constructor
+Headers:
+    len: 418639571
+    bwtLen: 418639572
+    sz: 104659893
+    bwtSz: 104659893
+    lineRate: 6
+    offRate: 4
+    offMask: 0xfffffff0
+    ftabChars: 10
+    eftabLen: 20
+    eftabSz: 80
+    ftabLen: 1048577
+    ftabSz: 4194308
+    offsLen: 26164974
+    offsSz: 104659896
+    lineSz: 64
+    sideSz: 64
+    sideBwtSz: 48
+    sideBwtLen: 192
+    numSides: 2180415
+    numLines: 2180415
+    ebwtTotLen: 139546560
+    ebwtTotSz: 139546560
+    color: 0
+    reverse: 1
+Total time for backward call to driver() for mirror index: 00:04:32

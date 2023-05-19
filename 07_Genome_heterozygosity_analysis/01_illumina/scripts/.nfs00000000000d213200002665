@@ -1,0 +1,45 @@
+/var/spool/gridengine/execd/bigbird/job_scripts/231397: line 32: ​: command not found
+sending incremental file list
+AF_contig.filtered.fasta
+
+sent 449,139,673 bytes  received 35 bytes  179,655,883.20 bytes/sec
+total size is 449,029,920  speedup is 1.00
+sending incremental file list
+TF_contig.filtered.fasta
+
+sent 435,203,616 bytes  received 35 bytes  290,135,767.33 bytes/sec
+total size is 435,097,263  speedup is 1.00
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+
+sent 22,406,799,752 bytes  received 54 bytes  117,006,787.50 bytes/sec
+total size is 22,401,330,441  speedup is 1.00
+sending incremental file list
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+
+sent 19,119,843,066 bytes  received 54 bytes  116,940,936.51 bytes/sec
+total size is 19,115,176,042  speedup is 1.00
+Settings:
+  Output files: "AF_genome_index.*.bt2"
+  Line rate: 6 (line is 64 bytes)
+  Lines per side: 1 (side is 64 bytes)
+  Offset rate: 4 (one in 16)
+  FTable chars: 10
+  Strings: unpacked
+  Max bucket size: default
+  Max bucket size, sqrt multiplier: default
+  Max bucket size, len divisor: 4
+  Difference-cover sample period: 1024
+  Endianness: little
+  Actual local endianness: little
+  Sanity checking: disabled
+  Assertions: disabled
+  Random seed: 0
+  Sizeofs: void*:8, int:4, long:8, size_t:8
+Input files DNA, FASTA:
+  /data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out/partition/
+Building a SMALL index
+Reading reference sizes
+Warning: Encountered empty reference sequence

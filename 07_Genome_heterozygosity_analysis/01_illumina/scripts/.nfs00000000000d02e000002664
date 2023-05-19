@@ -1,0 +1,43 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/var/spool/gridengine/execd/bigbird/job_scripts/231393: line 29: ​: command not found
+sending incremental file list
+AF_contig.filtered.fasta
+
+sent 449,139,673 bytes  received 35 bytes  99,808,824.00 bytes/sec
+total size is 449,029,920  speedup is 1.00
+sending incremental file list
+TF_contig.filtered.fasta
+
+sent 435,203,616 bytes  received 35 bytes  96,711,922.44 bytes/sec
+total size is 435,097,263  speedup is 1.00
+sending incremental file list
+AF7_Chrysomya-rufifacies_S2_R1_001.trimmed.fastq.gz
+AF7_Chrysomya-rufifacies_S2_R2_001.trimmed.fastq.gz
+
+sent 22,406,799,752 bytes  received 54 bytes  117,006,787.50 bytes/sec
+total size is 22,401,330,441  speedup is 1.00
+sending incremental file list
+TF11_Chrysomya-rufifacies_S3_R1_001.trimmed.fastq.gz
+TF11_Chrysomya-rufifacies_S3_R2_001.trimmed.fastq.gz
+
+sent 19,119,843,066 bytes  received 54 bytes  116,230,049.36 bytes/sec
+total size is 19,115,176,042  speedup is 1.00
+/var/spool/gridengine/execd/bigbird/job_scripts/231393: line 68: bowtie2-build: command not found

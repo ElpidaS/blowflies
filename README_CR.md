@@ -22,7 +22,7 @@
 
 > The **main aim** of this step is to "produce" the best possible quality of reads from the raw reads, in order to use them for dowstream analysis
 
-**0.1.1 Illumina Reads**
+**0.1.1 Illumina Reads - fastp trim**
 
 In this step we used;
 
@@ -93,6 +93,8 @@ Sequence Duplication Levels | We notice that there is a 10% of the total sequenc
 <img title="" src="file:///C:/Users/Elpida/AppData/Roaming/marktext/images/2023-04-21-16-57-04-image.png" alt="" width="380">
 
 Adapter content | the adapter remove part was successful for the reads. As in all cases in the trimmed reads the ONLY visible lines are the ones that represent the polyA and polyG.
+
+**0.1.1 Illumina Reads - Trim Galore trim**
 
 ## 0.2 Genome Assembly
 
@@ -200,11 +202,11 @@ In this step we used;
 
 **Directories**
 
-| Type of Directory | Directory                                                                                                                                                                                                                                                                                                                                                                                                                         | Description                                       |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| Input             | **for coverage files**<br/>`/data/ross/flies/raw/Chrysomya_rufifacies/illumina/`<br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/`<br/>**for hits files** <br/>`/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/`<br/>**for blobplots**<br/> - coverage & hits files (see above)<br/> - NCBI taxonomy names + nodes files `/data/ross/flies/analyses/blowflies/05_NCBI_taxdump` |                                                   |
-| Script            | `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/AF`<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/TF`                                                                                                                                                                                                                                                            | 3 scripts (2 for input and one for the blobtools) |
-| Output            | **for coverage files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/coverage_file` <br/> **for hits files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/hits_file`<br/>**for blobplots**<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/pre_partition/`          |                                                   |
+| Type of Directory | Directory                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Description                                       |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Input             | **for coverage files**<br/>`/data/ross/flies/raw/Chrysomya_rufifacies/illumina/`<br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/`<br/>**for hits files** <br/>`/data/ross/flies/analyses/blowflies/02_genome_assembly/01_spades/outputs/`<br/>**for blobplots**<br/> - coverage & hits files (see above)<br/> - NCBI taxonomy names + nodes files `/data/ross/flies/analyses/blowflies/05_NCBI_taxdump`<br/> Partition; <br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out/pre_partition` | partition; <br/>the `blobDB.table.txt`            |
+| Script            | `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/AF`<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/scripts/TF`                                                                                                                                                                                                                                                                                                                                                                                     | 3 scripts (2 for input and one for the blobtools) |
+| Output            | **for coverage files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/coverage_file` <br/> **for hits files** <br/>`/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/hits_file`<br/>**for blobplots**<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out or TF_out/pre_partition/`<br/> Partition<br/> `/data/ross/flies/analyses/blowflies/04_genome_partition/01_illumina/outputs/AF_out/partition`                |                                                   |
 
 Workflow A was used in this project ![4476](https://files.readme.io/21ef680-figure_1.png)
 
@@ -347,21 +349,27 @@ Output (./blobtools plot);
 
 ![](C:\Users\Elpida\AppData\Roaming\marktext\images\2023-05-11-18-17-17-image.png)
 
-In both of them, more than half of the assembly is a no-hit. But they have the same GC content as the arthropoda. So it should be that those contigs fly dna but the contigs are so small (N50 ~1000 nt) to be taxonomized.
+In both of them, more than half of the assembly is a no-hit. But they have the same GC content as the arthropoda. So it should be that those contigs are fly dna but the contigs are so small or full of repeats (?) (N50 ~1000 nt) to be taxonomized.
 
-Question rised; 
+Christine did say that they suspect the genome has an unusually high repetitive content. However - most of the no hits (histograms on the top and right of the plot) have similar GC and coverage to the arthropoda hits, which reassures us that these no-hit contigs are actually blowfly.
 
-- the biased GC content find previously was biased on the left not the right like here...
-
-- the contamination does not seem to be that much (3%)
-
-- the problem is the no-hit which I guess has to do with the fact that we are talking about an illumina assembly...
-
--  should focus on the cleaning reads in order to have a descent kmer plot
+- should focus on the cleaning reads in order to have a descent kmer plot
 
 Output (./blobtools view);
 
 - `blobDB.table.txt`
+
+### Blobtools; Partition
+
+> Keep only the contigs that contain the athropods DNA
+
+For this step we used; 
+
+- A `custome R script` (from Rob) - locally in my PC- to create the list of the contigs to keep
+
+- `seqtk` - use that list to extract the contigs from raw assembly
+
+HAVE TO WRITE DOWN !!!
 
 # <u>Chapter 1</u>
 

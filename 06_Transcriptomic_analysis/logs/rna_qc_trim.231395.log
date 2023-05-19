@@ -1,0 +1,455 @@
+sending incremental file list
+embryos_females_SRR5519675_pass.fastq.gz
+embryos_females_SRR5519676_pass.fastq.gz
+embryos_females_SRR5519687_pass.fastq.gz
+embryos_males_SRR5519698_pass.fastq.gz
+embryos_males_SRR5519705_pass.fastq.gz
+embryos_males_SRR5519706_pass.fastq.gz
+
+sent 24,039,628,886 bytes  received 130 bytes  116,981,163.09 bytes/sec
+total size is 24,033,760,744  speedup is 1.00
+application/gzip
+application/gzip
+Started analysis of embryos_females_SRR5519675_pass.fastq.gz
+application/gzip
+application/gzip
+application/gzip
+application/gzip
+Started analysis of embryos_females_SRR5519676_pass.fastq.gz
+Started analysis of embryos_females_SRR5519687_pass.fastq.gz
+Started analysis of embryos_males_SRR5519698_pass.fastq.gz
+Approx 5% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 5% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 5% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 5% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 10% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 10% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 10% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 10% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 15% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 15% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 15% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 15% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 20% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 20% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 20% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 20% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 25% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 25% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 25% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 30% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 25% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 30% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 30% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 35% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 30% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 35% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 40% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 35% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 40% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 35% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 45% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 45% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 40% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 40% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 50% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 50% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 45% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 45% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 55% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 55% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 50% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 50% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 60% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 60% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 55% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 65% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 55% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 65% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 60% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 70% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 60% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 70% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 75% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 65% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 75% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 65% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 80% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 70% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 80% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 70% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 85% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 75% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 85% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 75% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 90% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 80% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 90% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 95% complete for embryos_females_SRR5519675_pass.fastq.gz
+Approx 80% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 95% complete for embryos_females_SRR5519676_pass.fastq.gz
+Approx 85% complete for embryos_females_SRR5519687_pass.fastq.gz
+Analysis complete for embryos_females_SRR5519675_pass.fastq.gz
+Started analysis of embryos_males_SRR5519705_pass.fastq.gz
+Approx 85% complete for embryos_males_SRR5519698_pass.fastq.gz
+Analysis complete for embryos_females_SRR5519676_pass.fastq.gz
+Started analysis of embryos_males_SRR5519706_pass.fastq.gz
+Approx 90% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 5% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 90% complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 95% complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 5% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 10% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 95% complete for embryos_males_SRR5519698_pass.fastq.gz
+Analysis complete for embryos_females_SRR5519687_pass.fastq.gz
+Approx 10% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 15% complete for embryos_males_SRR5519705_pass.fastq.gz
+Analysis complete for embryos_males_SRR5519698_pass.fastq.gz
+Approx 15% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 20% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 25% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 20% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 30% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 25% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 35% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 30% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 40% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 35% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 45% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 40% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 50% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 45% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 55% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 60% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 50% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 65% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 55% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 70% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 60% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 75% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 65% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 80% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 70% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 85% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 75% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 90% complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 80% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 95% complete for embryos_males_SRR5519705_pass.fastq.gz
+Analysis complete for embryos_males_SRR5519705_pass.fastq.gz
+Approx 85% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 90% complete for embryos_males_SRR5519706_pass.fastq.gz
+Approx 95% complete for embryos_males_SRR5519706_pass.fastq.gz
+Analysis complete for embryos_males_SRR5519706_pass.fastq.gz
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Read1 before filtering:
+total reads: 39665912
+total bases: 3966591200
+Q20 bases: 3820743234(96.3231%)
+Q30 bases: 3639453983(91.7527%)
+
+Read1 after filtering:
+total reads: 38818759
+total bases: 3881875900
+Q20 bases: 3782641103(97.4436%)
+Q30 bases: 3607364684(92.9284%)
+
+Filtering result:
+reads passed filter: 38818759
+reads failed due to low quality: 788586
+reads failed due to too many N: 58567
+reads failed due to too short: 0
+reads with adapter trimmed: 0
+bases trimmed due to adapters: 0
+
+Duplication rate (may be overestimated since this is SE data): 61.8027%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_females_SRR5519675_pass.fastq.gz -o ./embryos_females_SRR5519675_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 505 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Read1 before filtering:
+total reads: 40327361
+total bases: 4032736100
+Q20 bases: 3884690862(96.3289%)
+Q30 bases: 3700173685(91.7534%)
+
+Read1 after filtering:
+total reads: 39470798
+total bases: 3947079800
+Q20 bases: 3846260749(97.4457%)
+Q30 bases: 3667781737(92.9239%)
+
+Filtering result:
+reads passed filter: 39470798
+reads failed due to low quality: 797432
+reads failed due to too many N: 59131
+reads failed due to too short: 0
+reads with adapter trimmed: 0
+bases trimmed due to adapters: 0
+
+Duplication rate (may be overestimated since this is SE data): 60.2102%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_females_SRR5519676_pass.fastq.gz -o ./embryos_females_SRR5519676_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 512 seconds
+Detecting adapter sequence for read1...
+ATAAAATTTAATGAAAAGTTTTTATAAAGAACTCGGCAAAAATAATGTTCGCCTGTTTAA
+
+Read1 before filtering:
+total reads: 45531605
+total bases: 4553160500
+Q20 bases: 4382400499(96.2496%)
+Q30 bases: 4167390564(91.5274%)
+
+Read1 after filtering:
+total reads: 44500768
+total bases: 4441943100
+Q20 bases: 4324057166(97.3461%)
+Q30 bases: 4116485916(92.6731%)
+
+Filtering result:
+reads passed filter: 44500768
+reads failed due to low quality: 901569
+reads failed due to too many N: 66678
+reads failed due to too short: 62590
+reads with adapter trimmed: 675173
+bases trimmed due to adapters: 13574523
+
+Duplication rate (may be overestimated since this is SE data): 55.6353%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_females_SRR5519687_pass.fastq.gz -o ./embryos_females_SRR5519687_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 577 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Read1 before filtering:
+total reads: 46417283
+total bases: 4641728300
+Q20 bases: 4472464964(96.3534%)
+Q30 bases: 4260313375(91.7829%)
+
+Read1 after filtering:
+total reads: 45444211
+total bases: 4544421100
+Q20 bases: 4428094970(97.4402%)
+Q30 bases: 4222861470(92.9241%)
+
+Filtering result:
+reads passed filter: 45444211
+reads failed due to low quality: 903640
+reads failed due to too many N: 69432
+reads failed due to too short: 0
+reads with adapter trimmed: 0
+bases trimmed due to adapters: 0
+
+Duplication rate (may be overestimated since this is SE data): 61.1909%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_males_SRR5519698_pass.fastq.gz -o ./embryos_males_SRR5519698_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 588 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Read1 before filtering:
+total reads: 44007638
+total bases: 4400763800
+Q20 bases: 4240958380(96.3687%)
+Q30 bases: 4041372336(91.8334%)
+
+Read1 after filtering:
+total reads: 43084171
+total bases: 4308417100
+Q20 bases: 4199157918(97.4641%)
+Q30 bases: 4006094411(92.983%)
+
+Filtering result:
+reads passed filter: 43084171
+reads failed due to low quality: 857719
+reads failed due to too many N: 65748
+reads failed due to too short: 0
+reads with adapter trimmed: 0
+bases trimmed due to adapters: 0
+
+Duplication rate (may be overestimated since this is SE data): 60.8913%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_males_SRR5519705_pass.fastq.gz -o ./embryos_males_SRR5519705_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 556 seconds
+Detecting adapter sequence for read1...
+No adapter detected for read1
+
+Read1 before filtering:
+total reads: 50073570
+total bases: 5007357000
+Q20 bases: 4826769957(96.3936%)
+Q30 bases: 4599021065(91.8453%)
+
+Read1 after filtering:
+total reads: 49036959
+total bases: 4903695900
+Q20 bases: 4779554310(97.4684%)
+Q30 bases: 4559135850(92.9735%)
+
+Filtering result:
+reads passed filter: 49036959
+reads failed due to low quality: 962127
+reads failed due to too many N: 74484
+reads failed due to too short: 0
+reads with adapter trimmed: 0
+bases trimmed due to adapters: 0
+
+Duplication rate (may be overestimated since this is SE data): 59.8172%
+
+JSON report: fastp.json
+HTML report: fastp.html
+
+fastp -i ./embryos_males_SRR5519706_pass.fastq.gz -o ./embryos_males_SRR5519706_pass.trimmed.fastq.gz 
+fastp v0.22.0, time used: 628 seconds
+application/gzip
+application/gzip
+Started analysis of embryos_females_SRR5519675_pass.trimmed.fastq.gz
+application/gzip
+application/gzip
+application/gzip
+application/gzip
+Started analysis of embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Started analysis of embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Started analysis of embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Analysis complete for embryos_females_SRR5519675_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Started analysis of embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Analysis complete for embryos_females_SRR5519676_pass.trimmed.fastq.gz
+Started analysis of embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 5% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Analysis complete for embryos_females_SRR5519687_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Analysis complete for embryos_males_SRR5519698_pass.trimmed.fastq.gz
+Approx 10% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 15% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 20% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 25% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 30% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 35% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 40% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 45% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 50% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 55% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 60% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 65% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 70% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 75% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 80% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Analysis complete for embryos_males_SRR5519705_pass.trimmed.fastq.gz
+Approx 85% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 90% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Approx 95% complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+Analysis complete for embryos_males_SRR5519706_pass.trimmed.fastq.gz
+mv: cannot stat '/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/scripts/rna_download.231395.log': No such file or directory
