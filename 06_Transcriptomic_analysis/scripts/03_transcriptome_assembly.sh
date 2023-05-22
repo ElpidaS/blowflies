@@ -38,7 +38,7 @@ rsync -av  $RNA_TRIM/* $SCRATCH
 for file in $(ls *.gz)
 do
 	base=$(basename $file "_pass.trimmed.fastq.gz")
-	Trinity --seqType fq --single ${base}"_pass.trimmed.fastq.gz" --CPU 12 --max_memory 50G --output $SCRATCH
+	Trinity --seqType fq --single ${base}"_pass.trimmed.fastq.gz" --CPU 12 --max_memory 50G --output $SCRATCH --no_version_check --bypass_java_version_check
 done
 
 mv $TRANSCRIPTOME/scripts/rna_assembly.$JOB_ID.log $TRANSCRIPTOME/logs
