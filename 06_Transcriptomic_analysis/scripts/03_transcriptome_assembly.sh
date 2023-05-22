@@ -22,9 +22,9 @@ conda activate Trinity
 
 set -e
 
-SCRATCH=/scratch/$USER/$JOB_ID/assembly_RNA
+SCRATCH=/scratch/$USER/$JOB_ID/trinity_assembly_RNA
 RNA_TRIM=/data/ross/flies/raw/Chrysomya_rufifacies/embryo_RNAseq/03_trimmed_reads
-OUT_ASS=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/outputs/rna_assemblies/
+OUT_ASS=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/outputs/trinity_rna_assemblies/
 TRANSCRIPTOME=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis
 
 mkdir -p $SCRATCH
@@ -38,7 +38,7 @@ rsync -av  $RNA_TRIM/* $SCRATCH
 for file in $(ls *.gz)
 do
 	base=$(basename $file "_pass.trimmed.fastq.gz")
-	Trinity --seqType fq --single ${base}"_pass.trimmed.fastq.gz" --CPU 12 --max_memory 50G --output ${base}"_transcriptome.fasta"
+	Trinity --seqType fq --single ${base}"_pass.trimmed.fastq.gz" --CPU 12 --max_memory 50G --output $SCRATCH
 done
 
 mv $TRANSCRIPTOME/scripts/rna_assembly.$JOB_ID.log $TRANSCRIPTOME/logs
