@@ -49,8 +49,10 @@ do
 	--output-dir=${base}_out \
 	--threads=16 \
 	--plaintext  \
-	--single ${base}.fasta
-	&& mv ${base}_out/abundance.tsv ${base}.tsv
+	--single ${base}._pass.trimmed.fastq.gz
+
+mv ${base}_out/abundance.tsv ${base}.tsv
+
 done
 
 
