@@ -49,12 +49,15 @@ do
 	--output-dir=${base}_out \
 	--threads=16 \
 	--plaintext  \
-	--single ${base}._pass.trimmed.fastq.gz
+  -l 100 \
+  -s 0
+	--single ${base}_pass.trimmed.fastq.gz
 
 mv ${base}_out/abundance.tsv ${base}.tsv
 
 done
 
+# for the -l and -s values you have to look at the fastq restults (after trimming)
 
 # this will output counts in TPM (transcripts per million) in .tsv files - there will be one file per sample/replicate. 
 # These can be read into R for plotting and DGE analyses.
