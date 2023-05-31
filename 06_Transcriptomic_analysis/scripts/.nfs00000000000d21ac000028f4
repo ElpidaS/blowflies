@@ -1,0 +1,58 @@
+sending incremental file list
+embryos_females_SRR5519675_pass.trimmed.fastq.gz
+embryos_females_SRR5519676_pass.trimmed.fastq.gz
+embryos_females_SRR5519687_pass.trimmed.fastq.gz
+embryos_males_SRR5519698_pass.trimmed.fastq.gz
+embryos_males_SRR5519705_pass.trimmed.fastq.gz
+embryos_males_SRR5519706_pass.trimmed.fastq.gz
+
+sent 25,241,826,264 bytes  received 130 bytes  116,054,374.23 bytes/sec
+total size is 25,235,664,648  speedup is 1.00
+sending incremental file list
+Trinity.fasta
+
+sent 46,484,132 bytes  received 35 bytes  30,989,444.67 bytes/sec
+total size is 46,472,670  speedup is 1.00
+
+[build] loading fasta file Trinity.fasta
+[build] k-mer length: 31
+[build] warning: clipped off poly-A tail (longer than 10)
+        from 854 target sequences
+[build] counting k-mers ... done.
+[build] building target de Bruijn graph ...  done 
+[build] creating equivalence classes ...  done
+[build] target de Bruijn graph has 89784 contigs and contains 24042606 k-mers 
+
+
+Error: cannot supply mean/sd without supplying both -l and -s
+Error: fragment length mean and sd must be supplied for single-end reads using -l and -s
+
+Usage: kallisto quant [arguments] FASTQ-files
+
+Required arguments:
+-i, --index=STRING            Filename for the kallisto index to be used for
+                              quantification
+-o, --output-dir=STRING       Directory to write output to
+
+Optional arguments:
+    --bias                    Perform sequence based bias correction
+-b, --bootstrap-samples=INT   Number of bootstrap samples (default: 0)
+    --seed=INT                Seed for the bootstrap sampling (default: 42)
+    --plaintext               Output plaintext instead of HDF5
+    --fusion                  Search for fusions for Pizzly
+    --single                  Quantify single-end reads
+    --single-overhang         Include reads where unobserved rest of fragment is
+                              predicted to lie outside a transcript
+    --fr-stranded             Strand specific reads, first read forward
+    --rf-stranded             Strand specific reads, first read reverse
+-l, --fragment-length=DOUBLE  Estimated average fragment length
+-s, --sd=DOUBLE               Estimated standard deviation of fragment length
+                              (default: -l, -s values are estimated from paired
+                               end data, but are required when using --single)
+-t, --threads=INT             Number of threads to use (default: 1)
+    --pseudobam               Save pseudoalignments to transcriptome to BAM file
+    --genomebam               Project pseudoalignments to genome sorted BAM file
+-g, --gtf                     GTF file for transcriptome information
+                              (required for --genomebam)
+-c, --chromosomes             Tab separated file with chrosome names and lengths
+                              (optional for --genomebam, but recommended)

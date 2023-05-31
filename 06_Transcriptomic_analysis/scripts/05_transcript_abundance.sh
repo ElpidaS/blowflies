@@ -42,26 +42,18 @@ kallisto index -i trinity.kallisto.idx Trinity.fasta
 # quantify
 for file in $(ls *.fastq.gz)
 do
-	base=$(basename ${file} "_pass.trimmed.fastq.gz")
-	kallisto quant \
-	--index=trinity.kallisto.idx \
-	-b 20 \
-	--output-dir=${base}_out \
-	--threads=16 \
-	--plaintext  \
-  -l 100 \
-  -s 0
-	--single ${base}_pass.trimmed.fastq.gz
-
-mv ${base}_out/abundance.tsv ${base}.tsv
+	
+  base=$(basename ${file} "_pass.trimmed.fastq.gz")
+  kallisto quant --index=trinity.kallisto.idx --output-dir=${base}_out --threads=16 --single -l 100 -s 0 --plaintext ${base}_pass.trimmed.fastq.gz 
 
 done
+
 
 # for the -l and -s values you have to look at the fastq restults (after trimming)
 
 # this will output counts in TPM (transcripts per million) in .tsv files - there will be one file per sample/replicate. 
 # These can be read into R for plotting and DGE analyses.
 
-mv /*_out $OUT
+mv ./*_out $OUT
 
 rm -rf $SCRATCH
