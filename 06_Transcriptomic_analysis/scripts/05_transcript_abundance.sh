@@ -44,8 +44,8 @@ for file in $(ls *.fastq.gz)
 do
 	
   base=$(basename ${file} "_pass.trimmed.fastq.gz")
-  kallisto quant --index=trinity.kallisto.idx --output-dir=${base}_out --threads=16 --single -l 100 -s 0 --plaintext ${base}_pass.trimmed.fastq.gz 
-
+  kallisto quant --index=trinity.kallisto.idx --output-dir=${base}_out --threads=16 --single -l 100 -s 0.1 --plaintext ${base}_pass.trimmed.fastq.gz 
+  mv ${base}_out/abundance.tsv ${base}_out/${base}.tsv 
 done
 
 
