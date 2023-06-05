@@ -35,11 +35,12 @@ rsync -av  $RNA_TRIM/* $SCRATCH
 
 
 ### 3. assemble a transcriptome with Trinity (https://github.com/trinityrnaseq/trinityrnaseq)
-for file in $(ls *.gz)
-do
-	base=$(basename $file "_pass.trimmed.fastq.gz")
-	Trinity --seqType fq --single ${base}"_pass.trimmed.fastq.gz" --CPU 12 --max_memory 50G --output $SCRATCH --no_version_check --bypass_java_version_check
-done
+
+# one transcriptome from all RNA seq available
+# that way the transcriptome will be more aquarate (as it will include all the possible transcripts (males and females))
+# and then we can use it as a common base for the transcript abundance comparison
+
+Trinity --seqType fq --single embryos_females_SRR5519675_pass.trimmed.fastq.gz,embryos_males_SRR5519698_pass.trimmed.fastq.gz,embryos_females_SRR5519676_pass.trimmed.fastq.gz,embryos_males_SRR5519705_pass.trimmed.fastq.gz,embryos_females_SRR5519687_pass.trimmed.fastq.gz,embryos_males_SRR5519706_pass.trimmed.fastq.gz --CPU 12 --max_memory 50G --output $SCRATCH --no_version_check --bypass_java_version_check
 
 mv $TRANSCRIPTOME/scripts/rna_assembly.$JOB_ID.log $TRANSCRIPTOME/logs
 
