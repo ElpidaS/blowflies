@@ -60,9 +60,7 @@ do
     # Mark and remove duplicates -- this is important to mitigate biases introduced by data generation steps such as PCR amplification.
     samtools index "${sample}.${sample}_contig_filtered.pic.sorted.bam" 
     
-    java -Xmx20g -jar /ceph/users/eskarlou/software/picard/build/libs/picard.jar 
-    
-    MarkDuplicates MAX_RECORDS_IN_RAM=400000 INPUT="${sample}.${sample}_contig_filtered.pic.sorted.bam" OUTPUT="${sample}.${sample}_contig_filtered.pic.rmdup.sorted.bam" M="${sample}.met.txt" REMOVE_DUPLICATES=true 
+    java -Xmx20g -jar /ceph/users/eskarlou/software/picard/build/libs/picard.jar MarkDuplicates MAX_RECORDS_IN_RAM=400000 INPUT="${sample}.${sample}_contig_filtered.pic.sorted.bam" OUTPUT="${sample}.${sample}_contig_filtered.pic.rmdup.sorted.bam" M="${sample}.met.txt" REMOVE_DUPLICATES=true 
     
     # Assign unique read groups
     # Assign unique read groups - it is important your alignment has unique readgroups 
