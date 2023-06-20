@@ -21,8 +21,9 @@ conda activate kallisto
 set -e
 
 SCRATCH=/scratch/$USER/$JOB_ID/abundance_transc
-TRIMM=/data/ross/flies/raw/Chrysomya_rufifacies/embryo_RNAseq/03_trimmed_reads/
+TRIMM=/data/ross/flies/raw/Chrysomya_rufifacies/embryo_RNAseq/03_trimmed_reads
 TRINITY=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/outputs/trinity_rna_assemblies
+CDS_DIR=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/outputs/transdecoder_filter
 OUT=/data/ross/flies/analyses/blowflies/06_Transcriptomic_analysis/outputs/transcript_abundance
 
 mkdir -p $SCRATCH
@@ -33,8 +34,11 @@ rsync -av  $TRIMM/* $SCRATCH
 
 # sync the RNA assembly
 rsync -av $TRINITY/Trinity.fasta $SCRATCH
+rsync -av $CDS_DIR/transcripts.fa $SCRATCH
 
 ### PART 4; Quantify transcript abundance with Kallisto (https://github.com/pachterlab/kallisto)
+
+# Whole fasta file
 
 # build kallisto index
 kallisto index -i trinity.kallisto.idx Trinity.fasta
@@ -48,6 +52,22 @@ do
   mv ${base}_out/abundance.tsv ${base}_out/${base}.tsv 
 done
 
+#########3 Only for Cds #################
+
+# we transfered the transcoder.cds to a fa file
+# this .fa file will be used in kallisto to count the abundance of ONLY coding RNA
+
+# build kallisto index
+kallisto index -i transcripts.kallisto.idx transcripts.fa
+
+# quantify
+for file in $(ls *.fastq.gz)
+do
+	
+  base=$(basename ${file} "_pass.trimmed.fastq.gz")
+  kallisto quant --index=transcripts.kallisto.idx --output-dir=${base}_out --threads=16 --single -l 100 -s 0.1 --plaintext ${base}_pass.trimmed.fastq.gz 
+  mv ${base}_out/abundance.tsv ${base}_out/${base}.transcript.tsv 
+done
 
 # for the -l and -s values you have to look at the fastq restults (after trimming)
 
